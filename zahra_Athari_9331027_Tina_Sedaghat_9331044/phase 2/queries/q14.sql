@@ -1,0 +1,3 @@
+select RegisteredCostumerUsernames.CostumerUsername,  creditWithGift.CostumerCredit - RegisteredCostumer.CostumerCredit as gift
+from creditWithGift, RegisteredCostumerUsernames, RegisteredCostumer
+where RegisteredCostumerUsernames.CostumerID = RegisteredCostumer.CostumerID and RegisteredCostumer.CostumerID = creditWithGift.CostumerID
